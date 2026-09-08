@@ -5,33 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chadarasi Chandra Sekhar - Portfolio</title>
   <style>
+    /* Global Styles */
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
       margin: 0;
-      background-color: #f4f6f9;
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
       color: #333;
     }
     /* Navigation Bar */
     nav {
-      background-color: #2c3e50;
+      background-color: rgba(44, 62, 80, 0.9);
       padding: 15px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
+      transition: color 0.3s;
     }
     nav a:hover {
-      color: #3498db;
+      color: #f1c40f;
     }
     /* Header */
     header {
       background: linear-gradient(135deg, #3498db, #2c3e50);
       color: white;
       text-align: center;
-      padding: 50px 20px;
+      padding: 60px 20px;
     }
     header img {
       width: 150px;
@@ -41,11 +46,27 @@
     }
     header h1 {
       margin: 10px 0 5px;
-      font-size: 32px;
+      font-size: 36px;
     }
     header p {
       margin: 0;
-      font-size: 16px;
+      font-size: 18px;
+    }
+    /* Resume Button */
+    .resume-btn {
+      display: inline-block;
+      background-color: #f1c40f;
+      color: #2c3e50;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+    .resume-btn:hover {
+      background-color: #e67e22;
+      color: white;
     }
     /* Sections */
     .container {
@@ -54,11 +75,15 @@
       padding: 20px;
     }
     section {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.9);
       padding: 25px;
       margin-bottom: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+    section:hover {
+      transform: translateY(-5px);
     }
     h2 {
       color: #2c3e50;
@@ -70,11 +95,12 @@
       list-style-type: square;
       margin-left: 20px;
     }
+    /* Footer */
     footer {
-      background-color: #2c3e50;
+      background-color: rgba(44, 62, 80, 0.9);
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       margin-top: 30px;
     }
   </style>
@@ -87,6 +113,7 @@
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <!-- Header -->
@@ -94,6 +121,7 @@
     <img src="profile.jpeg" alt="Chadarasi Chandra Sekhar">
     <h1>CHADARASI CHANDRA SEKHAR</h1>
     <p>📧 chchsekhar2000@gmail.com | 📱 +91 9381989587</p>
+    <a href="resume.pdf" download class="resume-btn">⬇️ Download My Resume</a>
   </header>
 
   <!-- Content -->
@@ -109,3 +137,50 @@
         <li>AWS (VPC, EC2, EKS, S3, IAM, ALB, Route 53, CloudWatch)</li>
         <li>Kubernetes, Docker, Argo CD, Helm</li>
         <li>Terraform, Ansible</li>
+        <li>Jenkins, GitHub Actions, Git</li>
+        <li>JFrog Artifactory, Container Registry</li>
+        <li>Nginx, Apache, Tomcat</li>
+        <li>Prometheus, Grafana, <strong>EFK (Elasticsearch, Fluentd, Kibana)</strong></li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <p><strong>Clover Infotech — DevOps Engineer</strong><br>
+      Client Deployment: Axis Bank | Apr 2023 – Present</p>
+      <ul>
+        <li>Designed and deployed containerized banking applications on Amazon EKS.</li>
+        <li>Engineered CI/CD pipelines with Jenkins, GitHub Actions, Argo CD.</li>
+        <li>Provisioned AWS infra with Terraform.</li>
+        <li>Architected secure ingress and traffic routing with ALB, Route 53, and Kubernetes Ingress.</li>
+        <li>Implemented secure reverse proxies and SSL/TLS certificates.</li>
+        <li>Automated observability with Prometheus, CloudWatch, and EFK stack.</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Key Projects & Achievements</h2>
+      <ul>
+        <li>🚀 CI/CD Transformation: Reduced deployment windows by 40% with GitHub Actions.</li>
+        <li>📈 High-Availability Operations: Maintained 99.9% uptime for critical banking modules.</li>
+        <li>🔒 Secure Infrastructure Migration: Migrated monolithic services to container clusters.</li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p>B.Tech in Electrical and Electronics Engineering (EEE)</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you’d like to get in touch, please email me at <strong>chchsekhar2000@gmail.com</strong>.</p>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Chadarasi Chandra Sekhar | Portfolio</p>
+  </footer>
+</body>
+</html>
